@@ -13,7 +13,7 @@ struct BusinessSearch: Decodable {
     var total: Int?
 }
 
-struct Business: Decodable {
+struct Business: Decodable, Identifiable {
     var alias: String?
     var categories: [Category]?
     var coordinates: Coordinates?
