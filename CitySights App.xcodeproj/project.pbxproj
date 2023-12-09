@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B1A0D3F2B204BBD00EC6DE1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A0D3E2B204BBD00EC6DE1 /* DataService.swift */; };
+		3B1A0D442B215CF800EC6DE1 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A0D432B215CF800EC6DE1 /* BusinessSearch.swift */; };
 		3BA9E7E72B20256F0061CC29 /* CitySights_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9E7E62B20256F0061CC29 /* CitySights_AppApp.swift */; };
 		3BA9E7E92B20256F0061CC29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9E7E82B20256F0061CC29 /* ContentView.swift */; };
 		3BA9E7EB2B2025700061CC29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA9E7EA2B2025700061CC29 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		3B1A0D3E2B204BBD00EC6DE1 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3B1A0D402B2050C500EC6DE1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../Config.xcconfig; sourceTree = "<group>"; };
 		3B1A0D412B20516F00EC6DE1 /* CitySights-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CitySights-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3B1A0D432B215CF800EC6DE1 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 		3BA9E7E32B20256F0061CC29 /* CitySights App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CitySights App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA9E7E62B20256F0061CC29 /* CitySights_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySights_AppApp.swift; sourceTree = "<group>"; };
 		3BA9E7E82B20256F0061CC29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1A0D422B215CE700EC6DE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B1A0D432B215CF800EC6DE1 /* BusinessSearch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3BA9E7DA2B20256F0061CC29 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 		3BA9E7E52B20256F0061CC29 /* CitySights App */ = {
 			isa = PBXGroup;
 			children = (
+				3B1A0D422B215CE700EC6DE1 /* Models */,
 				3B1A0D412B20516F00EC6DE1 /* CitySights-App-Info.plist */,
 				3B1A0D402B2050C500EC6DE1 /* Config.xcconfig */,
 				3BA9E7E62B20256F0061CC29 /* CitySights_AppApp.swift */,
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1A0D3F2B204BBD00EC6DE1 /* DataService.swift in Sources */,
+				3B1A0D442B215CF800EC6DE1 /* BusinessSearch.swift in Sources */,
 				3BA9E7E92B20256F0061CC29 /* ContentView.swift in Sources */,
 				3BA9E7E72B20256F0061CC29 /* CitySights_AppApp.swift in Sources */,
 			);
