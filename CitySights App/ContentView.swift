@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State var query: String = ""
     @State var business = [Business]()
+    @State var detailsPresented = false
+    @State var selectedBusiness: Business = Business()
     
     var service = DataService()
     
@@ -32,28 +34,40 @@ struct ContentView: View {
             }
             List {
                 ForEach(business) { b in
-                    HStack{
-                        Image("list-placeholder-image")
-                        VStack(alignment:.leading, spacing: 20){
-                            Text(b.name ?? "Error")
-                                .font(Font.system(size: 15))
-                                .bold()
-                            Text(TextHelper.distanceAwayText(meters: b.distance ?? 0))
-                                .font(Font.system(size: 16))
-                                .foregroundStyle(Color(red: 67/255, green: 71/255, blue: 76/255))
-                        }.listRowSeparator(.hidden)
-                        Spacer()
-                        Image("regular_\(b.rating ?? 0)")
+                    VStack(spacing: 20){
+                        HStack(spacing: 0){
+                            Image("list-placeholder-image")
+                                .padding(.trailing, 16)
+                            VStack(alignment:.leading){
+                                Text(b.name ?? "Error")
+                                    .font(Font.system(size: 15))
+                                    .bold()
+                                Text(TextHelper.distanceAwayText(meters: b.distance ?? 0))
+                                    .font(Font.system(size: 16))
+                                    .foregroundStyle(Color(red: 67/255, green: 71/255, blue: 76/255))
+                            }.listRowSeparator(.hidden)
+                            Spacer()
+                            Image("regular_\(b.rating ?? 0)")
+                        }
+                    }
+                    .onTapGesture {
+                        selectedBusiness = b
+                        detailsPresented.toggle()
                     }
                     Divider()
                     
                 }
+                .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
+
         }
         .task {
             business = await service.businessSearch() ?? [Business]()
         }
+        .sheet(isPresented: $detailsPresented, content: {
+            BusinessDetailView(business: $selectedBusiness)
+        })
     }
 }
 
