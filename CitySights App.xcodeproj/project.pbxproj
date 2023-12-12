@@ -45,7 +45,6 @@
 		3B1A0D422B215CE700EC6DE1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3BAE65E32B2801A4000E0C21 /* Helper */,
 				3B1A0D432B215CF800EC6DE1 /* BusinessSearch.swift */,
 			);
 			path = Models;
@@ -70,6 +69,7 @@
 		3BA9E7E52B20256F0061CC29 /* CitySights App */ = {
 			isa = PBXGroup;
 			children = (
+				3BAE65E32B2801A4000E0C21 /* Helper */,
 				3B1A0D422B215CE700EC6DE1 /* Models */,
 				3B1A0D412B20516F00EC6DE1 /* CitySights-App-Info.plist */,
 				3B1A0D402B2050C500EC6DE1 /* Config.xcconfig */,
@@ -96,7 +96,8 @@
 			children = (
 				3BAE65E42B2801CD000E0C21 /* TextHelper.swift */,
 			);
-			path = Helper;
+			name = Helper;
+			path = Models/Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
