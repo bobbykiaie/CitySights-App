@@ -30,12 +30,27 @@ struct ContentView: View {
                         .clipShape(.rect(cornerRadius: 10))
                 }
             }
-            List(business) { business in
-                Text(business.name ?? "Error")
+            List {
+                ForEach(business) { b in
+                    HStack{
+                        Image("list-placeholder-image")
+                        VStack(alignment:.leading, spacing: 20){
+                            Text(b.name ?? "Error")
+                                .font(Font.system(size: 15))
+                                .bold()
+                            Text(TextHelper.distanceAwayText(meters: b.distance ?? 0))
+                                .font(Font.system(size: 16))
+                                .foregroundStyle(Color(red: 67/255, green: 71/255, blue: 76/255))
+                        }.listRowSeparator(.hidden)
+                        Spacer()
+                        Image("regular_\(b.rating ?? 0)")
+                    }
+                    Divider()
+                    
+                }
             }
+            .listStyle(.plain)
         }
-        
-        .padding()
         .task {
             business = await service.businessSearch() ?? [Business]()
         }
