@@ -9,17 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var query: String = ""
-    @State var business = [Business]()
+    @Environment(BusinessModel.self) var model
+   
     @State var detailsPresented = false
-    @State var selectedBusiness: Business = Business()
-    
     var service = DataService()
     
     var body: some View {
+        
+        @Bindable var model = model
+        
         VStack{
             HStack {
-                TextField("What are you looking for ", text: $query).textFieldStyle(.roundedBorder)
+                TextField("What are you looking for ", text: $model.query).textFieldStyle(.roundedBorder)
                 Button {
                     let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? "No Key"
                     print(apiKey)
@@ -33,7 +34,7 @@ struct ContentView: View {
                 }
             }
             List {
-                ForEach(business) { b in
+                ForEach(model.businesses) { b in
                     VStack(spacing: 20){
                         HStack(spacing: 0){
                             Image("list-placeholder-image")
@@ -51,7 +52,7 @@ struct ContentView: View {
                         }
                     }
                     .onTapGesture {
-                        selectedBusiness = b
+                        model.selectedBusiness = b
                         detailsPresented.toggle()
                     }
                     Divider()
@@ -62,11 +63,11 @@ struct ContentView: View {
             .listStyle(.plain)
 
         }
-        .task {
-            business = await service.businessSearch() ?? [Business]()
-        }
+        .onAppear(perform: {
+            model.getBusinesses()
+        })
         .sheet(isPresented: $detailsPresented, content: {
-            BusinessDetailView(business: $selectedBusiness)
+            BusinessDetailView()
         })
     }
 }

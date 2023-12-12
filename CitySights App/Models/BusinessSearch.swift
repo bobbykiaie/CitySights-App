@@ -1,5 +1,5 @@
 struct BusinessSearch: Decodable {
-    var businesses: [Business]?
+    var businesses: [Business]
     var region: Region?
     var total: Int?
 }

@@ -34,7 +34,7 @@ struct DataService {
                 // 4. Parse the JSON
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(BusinessSearch.self, from: data)
-                print(result.businesses ?? "No Data")
+                print(result.businesses )
                 return result.businesses
                
             }

@@ -15,6 +15,7 @@
 		3BA9E7EE2B2025700061CC29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA9E7ED2B2025700061CC29 /* Preview Assets.xcassets */; };
 		3BAE65E52B2801CD000E0C21 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65E42B2801CD000E0C21 /* TextHelper.swift */; };
 		3BAE65E72B2805CC000E0C21 /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65E62B2805CC000E0C21 /* BusinessDetailView.swift */; };
+		3BAE65E92B291E29000E0C21 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65E82B291E29000E0C21 /* BusinessModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		3BA9E7ED2B2025700061CC29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BAE65E42B2801CD000E0C21 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		3BAE65E62B2805CC000E0C21 /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
+		3BAE65E82B291E29000E0C21 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				3BA9E7EA2B2025700061CC29 /* Assets.xcassets */,
 				3BA9E7EC2B2025700061CC29 /* Preview Content */,
 				3BAE65E62B2805CC000E0C21 /* BusinessDetailView.swift */,
+				3BAE65E82B291E29000E0C21 /* BusinessModel.swift */,
 			);
 			path = "CitySights App";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1A0D3F2B204BBD00EC6DE1 /* DataService.swift in Sources */,
+				3BAE65E92B291E29000E0C21 /* BusinessModel.swift in Sources */,
 				3BAE65E72B2805CC000E0C21 /* BusinessDetailView.swift in Sources */,
 				3B1A0D442B215CF800EC6DE1 /* BusinessSearch.swift in Sources */,
 				3BAE65E52B2801CD000E0C21 /* TextHelper.swift in Sources */,
