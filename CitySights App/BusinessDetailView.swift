@@ -24,7 +24,7 @@ struct BusinessDetailView: View {
             }
             .frame(height: 164)
             
-            if let isClosed = model.selectedBusiness.isClosed {
+            if let isClosed = model.selectedBusiness?.isClosed {
                 ZStack(alignment: .leading){
                     Rectangle()
                         .foregroundStyle(isClosed ? .red : .green)
@@ -40,23 +40,23 @@ struct BusinessDetailView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    Text(model.selectedBusiness.name ?? "")
+                    Text(model.selectedBusiness?.name ?? "")
                         .font(Font.system(size: 21))
                         .bold()
                         .padding(.bottom, 10)
                         .padding(.top, 16)
                     Spacer()
-                    Text("\(model.selectedBusiness.location?.address1 ?? ""), \(model.selectedBusiness.location?.city ?? "")")
-                    Text("\(model.selectedBusiness.location?.state ?? ""), \(model.selectedBusiness.location?.zipCode ?? ""), \(model.selectedBusiness.location?.country ?? "")")
+                    Text("\(model.selectedBusiness?.location?.address1 ?? ""), \(model.selectedBusiness?.location?.city ?? "")")
+                    Text("\(model.selectedBusiness?.location?.state ?? ""), \(model.selectedBusiness?.location?.zipCode ?? ""), \(model.selectedBusiness?.location?.country ?? "")")
                         .padding(.bottom, 10)
-                    Image("regular_\(model.selectedBusiness.rating ?? 0)")
+                    Image("regular_\(model.selectedBusiness?.rating ?? 0)")
                         .padding(.bottom, 16)
                     
                     Divider()
                     
                     HStack {
                         Image(systemName: "phone")
-                        Text(model.selectedBusiness.phone ?? "")
+                        Text(model.selectedBusiness?.phone ?? "")
                         Spacer()
                         Image(systemName: "arrow.right")
                     }
@@ -64,7 +64,7 @@ struct BusinessDetailView: View {
                     Divider()
                     HStack {
                         Image(systemName: "globe")
-                        Text(model.selectedBusiness.url ?? "")
+                        Text(model.selectedBusiness?.url ?? "")
                             .lineLimit(1)
                         Spacer()
                         Image(systemName: "arrow.right")
@@ -73,7 +73,7 @@ struct BusinessDetailView: View {
                     Divider()
                     HStack {
                         Image(systemName: "bubble.left.and.bubble.right")
-                        Text("\(model.selectedBusiness.reviewCount ?? 0)")
+                        Text("\(model.selectedBusiness?.reviewCount ?? 0)")
                         Spacer()
                         Image(systemName: "arrow.right")
                     }
@@ -88,5 +88,5 @@ struct BusinessDetailView: View {
 }
 
 #Preview {
-    BusinessDetailView()
+    BusinessDetailView().environment(BusinessModel())
 }

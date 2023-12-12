@@ -12,7 +12,7 @@ import SwiftUI
 class BusinessModel {
    var query: String = ""
    var businesses  = [Business]()
-   var selectedBusiness: Business = Business()
+   var selectedBusiness: Business?
     
     
     var service = DataService()
