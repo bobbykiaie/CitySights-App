@@ -1,12 +1,3 @@
-//
-//  BusinessSearch.swift
-//  CitySights App
-//
-//  Created by Babak Kiaie on 12/6/23.
-//
-
-import Foundation
-
 struct BusinessSearch: Decodable {
     var businesses: [Business]?
     var region: Region?
@@ -30,6 +21,13 @@ struct Business: Decodable, Identifiable {
     var reviewCount: Int?
     var transactions: [String]?
     var url: String?
+
+    enum CodingKeys: String, CodingKey {
+        case alias, categories, coordinates, distance, id, imageUrl, location, name, phone, price, rating, transactions, url
+        case displayPhone = "display_phone"
+        case isClosed = "is_closed"
+        case reviewCount = "review_count"
+    }
 }
 
 struct Category: Decodable {
@@ -51,6 +49,11 @@ struct Location: Decodable {
     var displayAddress: [String]?
     var state: String?
     var zipCode: String?
+
+    enum CodingKeys: String, CodingKey {
+        case address1, address2, address3, city, country, state, zipCode = "zip_code"
+        case displayAddress = "display_address"
+    }
 }
 
 struct Region: Decodable {
