@@ -18,6 +18,8 @@
 		3BAE65E92B291E29000E0C21 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65E82B291E29000E0C21 /* BusinessModel.swift */; };
 		3BAE65EB2B29244F000E0C21 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65EA2B29244F000E0C21 /* MapView.swift */; };
 		3BAE65ED2B292493000E0C21 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65EC2B292493000E0C21 /* ListView.swift */; };
+		3BAE65EF2B2AB31E000E0C21 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65EE2B2AB31E000E0C21 /* OnboardingView.swift */; };
+		3BAE65F12B2AC017000E0C21 /* OnboardingViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE65F02B2AC017000E0C21 /* OnboardingViewDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3BAE65E82B291E29000E0C21 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
 		3BAE65EA2B29244F000E0C21 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3BAE65EC2B292493000E0C21 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3BAE65EE2B2AB31E000E0C21 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3BAE65F02B2AC017000E0C21 /* OnboardingViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				3BAE65E82B291E29000E0C21 /* BusinessModel.swift */,
 				3BAE65EA2B29244F000E0C21 /* MapView.swift */,
 				3BAE65EC2B292493000E0C21 /* ListView.swift */,
+				3BAE65EE2B2AB31E000E0C21 /* OnboardingView.swift */,
+				3BAE65F02B2AC017000E0C21 /* OnboardingViewDetails.swift */,
 			);
 			path = "CitySights App";
 			sourceTree = "<group>";
@@ -182,10 +188,12 @@
 				3B1A0D3F2B204BBD00EC6DE1 /* DataService.swift in Sources */,
 				3BAE65EB2B29244F000E0C21 /* MapView.swift in Sources */,
 				3BAE65E92B291E29000E0C21 /* BusinessModel.swift in Sources */,
+				3BAE65EF2B2AB31E000E0C21 /* OnboardingView.swift in Sources */,
 				3BAE65E72B2805CC000E0C21 /* BusinessDetailView.swift in Sources */,
 				3B1A0D442B215CF800EC6DE1 /* BusinessSearch.swift in Sources */,
 				3BAE65E52B2801CD000E0C21 /* TextHelper.swift in Sources */,
 				3BA9E7E92B20256F0061CC29 /* HomeView.swift in Sources */,
+				3BAE65F12B2AC017000E0C21 /* OnboardingViewDetails.swift in Sources */,
 				3BA9E7E72B20256F0061CC29 /* CitySights_AppApp.swift in Sources */,
 				3BAE65ED2B292493000E0C21 /* ListView.swift in Sources */,
 			);
