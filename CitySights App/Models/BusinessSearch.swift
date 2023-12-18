@@ -23,10 +23,11 @@ struct Business: Decodable, Identifiable {
     var url: String?
 
     enum CodingKeys: String, CodingKey {
-        case alias, categories, coordinates, distance, id, imageUrl, location, name, phone, price, rating, transactions, url
+        case alias, categories, coordinates, distance, id, location, name, phone, price, rating, transactions, url
         case displayPhone = "display_phone"
         case isClosed = "is_closed"
         case reviewCount = "review_count"
+        case imageUrl = "image_url"
     }
 }
 
