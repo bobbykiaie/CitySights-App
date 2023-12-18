@@ -60,6 +60,7 @@ class BusinessModel: NSObject, CLLocationManagerDelegate {
         currentUserLocation = locations.last?.coordinate
         
         if currentUserLocation != nil {
+            currentUserLocation = locations.last?.coordinate
             getBusinesses()
         }
         
